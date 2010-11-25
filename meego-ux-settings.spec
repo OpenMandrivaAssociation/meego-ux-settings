@@ -8,6 +8,7 @@ URL: http://www.meego.com
 Source0: README
 Source1: %gconf-tree.xml
 Source2: air-environment.sh
+Source3: meego.path
 BuildArch: noarch
 BuildRequires: GConf2
 BuildRequires: libxml2-utils
@@ -26,10 +27,12 @@ cp %{SOURCE0} .
 install -d %{buildroot}%{_sysconfdir}/gconf/gconf.xml.meego
 xmllint %{SOURCE1} && install -m 0644 %{SOURCE1} %{buildroot}%{_sysconfdir}/gconf/gconf.xml.meego
 install -d %{buildroot}%{_sysconfdir}/profile.d
-install -m 0644 %{SOURCE2} $RPM_BUILD_ROOT%{_sysconfdir}/profile.d
+install -m 0644 %{SOURCE2} %{buildroot}%{_sysconfdir}/profile.d
+install -D -m 0644 %{SOURCE3} %{buildroot}%{_sysconfdir}/gconf/2/meego.path
 
 %files
 %defattr(-,root,root,-)
 %doc README
+%{_sysconfdir}/gconf/2/meego.path
 %{_sysconfdir}/gconf/gconf.xml.meego/%gconf-tree.xml
 %{_sysconfdir}/profile.d/air-environment.sh
