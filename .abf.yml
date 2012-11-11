@@ -1,0 +1,5 @@
+sources:
+  "air-environment.sh:"	a49c553dc11f1dd8bcf98a83b54919803d0a7ff8
+  "%gconf-tree.xml:"	95aee6cccd6833201a5abe8e4dd831cc98dd383a
+  "meego.path:"	be75e2f47caca9d58de97a60728abc0c70befadf
+  "README:"	264c69011fbe5b683c411f57c24dcd98677982fe
