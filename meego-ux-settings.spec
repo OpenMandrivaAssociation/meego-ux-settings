@@ -4,7 +4,7 @@ Release: %mkrel 1
 Summary: Package to setup the environment and schemas
 Group: Desktop/Interface
 License: LGPLv2.1
-URL: http://www.meego.com
+URL: https://www.meego.com
 Source0: README
 Source1: %gconf-tree.xml
 Source2: air-environment.sh
